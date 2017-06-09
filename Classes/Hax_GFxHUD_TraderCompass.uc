@@ -1,0 +1,1 @@
+class Hax_GFxHUD_TraderCompass extends KFGFxHUD_TraderCompass;

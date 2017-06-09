@@ -1,0 +1,1 @@
+class Hax_GFxWidget_BaseParty extends KFGFxWidget_BaseParty;
