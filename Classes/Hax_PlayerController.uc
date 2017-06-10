@@ -1,4 +1,4 @@
-class Hax_PlayerController extends CD_PlayerController;
+class Hax_PlayerController extends KFPlayerController;
 
 var Hax_GFxMoviePlayer_Manager      MyHax_GFxManager;
 var array<int>  PerkBuildCache;

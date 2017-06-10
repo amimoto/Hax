@@ -2,6 +2,8 @@ $Description "Game-breaking silliness.
 
 What happens to the bullet hose when they don't need to reload? Or never ending volcano of doom?
 
+Think of this a first person shoot 'em up.
+
 This mod ain't balanced, hard, or remotely sensible. It's dumb and you probably shouldn't play it: It's a cheat mode wrapped up in a mod. Good thing no one can get actual exp from this.
 
 Still, the source code may be useful for someone trying to see how to modify perks.
@@ -9,7 +11,11 @@ Still, the source code may be useful for someone trying to see how to modify per
 Changes from vanilla survival:
 
 * Infinite Ammo, no reload required
-* Use CD to increase the number of Zeds on screen
+* Zeds are all at 6P health levels
+* 4 times normal number of Zeds per wave
+* Max Monsters Alive = 20 + 32 * #players maxmonsters
+* Spawn rate is 0
+* Spawner is called 10 times a second
 * No trader lines spoken
 
 Making this puppy run:
