@@ -24,7 +24,7 @@ Hax source code can be found here:
 
 https://github.com/amimoto/Hax"
 $Title "Hax"
-$PreviewFile "Documents\My Games\KillingFloor2\KFGame\src\Hax\yeehaw.png"
+$PreviewFile "c:\temp\hax.png"
 $Tags "Gamemodes"
 $MicroTxItem "false"
-$PackageDirectory "Documents\My Games\KillingFloor2\KFGame\src\Hax\YeeHawUpload"
+$PackageDirectory "c:\temp\hax"
