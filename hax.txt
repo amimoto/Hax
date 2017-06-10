@@ -1,0 +1,30 @@
+$Description "Game-breaking silliness.
+
+What happens to the bullet hose when they don't need to reload? Or never ending volcano of doom?
+
+This mod ain't balanced, hard, or remotely sensible. It's dumb and you probably shouldn't play it: It's a cheat mode wrapped up in a mod. Good thing no one can get actual exp from this.
+
+Still, the source code may be useful for someone trying to see how to modify perks.
+
+Changes from vanilla survival:
+
+* Infinite Ammo, no reload required
+* Use CD to increase the number of Zeds on screen
+* No trader lines spoken
+
+Making this puppy run:
+
+* Start Killing Floor 2
+* Hit tilde ~ to bring down the console
+* Enter in the following: open kf-burningparis?game=Hax.Hax_Survival
+* Swap kf-burningparis for other maps (eg. kf-outpost)
+* Change difficulty by supplying another difficulty parameter. So for HoE it could be: open kf-burningparis?game=Hax.Hax_Survival?Difficulty=3 (Note: 0=Normal)
+
+Hax source code can be found here:
+
+https://github.com/amimoto/Hax"
+$Title "Hax"
+$PreviewFile "Documents\My Games\KillingFloor2\KFGame\src\Hax\yeehaw.png"
+$Tags "Gamemodes"
+$MicroTxItem "false"
+$PackageDirectory "Documents\My Games\KillingFloor2\KFGame\src\Hax\YeeHawUpload"
