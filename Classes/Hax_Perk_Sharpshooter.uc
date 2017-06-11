@@ -3,9 +3,24 @@ class Hax_Perk_Sharpshooter extends KFPerk_Sharpshooter;
 simulated event UpdatePerkBuild( const out byte InSelectedSkills[`MAX_PERK_SKILLS], class<KFPerk> PerkClass)
 {
     local int NewPerkBuild;
+    local string TruePerkClassName;
+    local class<KFPerk> TruePerkClass;
+
+    if ( Left(PerkClass.Name,4) == "Hax_" )
+    {
+        TruePerkClassName = "KFGame.KFPerk_"$Mid(PerkClass.Name,9);
+        TruePerkClass = class<KFPerk>(DynamicLoadObject(TruePerkClassName, class'Class'));
+    }
+    else
+    {
+        TruePerkClass = PerkClass;
+    }
+
+    super.UpdatePerkBuild(InSelectedSkills, TruePerkClass);
 
     if( Controller(Owner).IsLocalController() )
     {
+
         PackPerkBuild( NewPerkBuild, InSelectedSkills );
         Hax_PlayerController(Owner).CachePerkBuild(self.Class, NewPerkBuild);
     }

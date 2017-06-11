@@ -6,6 +6,7 @@ Package Builder
 Usage:
     make.py install [options]
     make.py test [options]
+    make.py server [options]
     make.py build [options]
     make.py publish [options]
 
@@ -31,6 +32,9 @@ CONFIG_BASE = {
                     'workshop_upload': '"{workshop_fpath}" hax.txt',
                     'target_workshop': '~/Documents/My Games/KillingFloor2/hax.txt',
                     'test': '"{bin_path}/kfeditor.exe" kf-outpost?game=Hax.Hax_Survival?difficulty=2 -useunpublished -log',
+                    'server_copy': [
+                            ['{brew_path}/Hax.u','{server_path}/BrewedPC'],
+                        ],
                     'build': '"{bin_path}/kfeditor.exe" brewcontent -platform=PC -log',
                     'workshop_copy': [
                             ['{brew_path}/Hax.u','BrewedPC'],
@@ -53,8 +57,7 @@ KF2_BIN_PATH = KF2_INSTALL_PATH + r"\Binaries\Win64"
 KF2_WORKSHOP_FPATH = KF2_INSTALL_PATH + r"\Binaries\WorkshopUserTool.exe"
 HOME_PATH = os.path.expanduser("~")
 KF2_BREWED_PATH = HOME_PATH+"/Documents/My Games/KillingFloor2/KFGame/Published/BrewedPC"
-
-print KF2_BREWED_PATH
+KF2_SERVER_PATH = r"C:\kf2server\KFGame"
 
 def load_config(config_fpath):
     with open(config_fpath) as f:
@@ -113,6 +116,28 @@ elif args['test']:
                             install_path=KF2_INSTALL_PATH
                         )
     os.system(test_execute)
+
+elif args['server']:
+    config = build_config(CONFIG_FPATH)
+
+    # Copy files into the publish folders
+    for src, dest in config['server_copy']:
+        src_fpath = src.format(
+                            bin_path=KF2_BIN_PATH,
+                            install_path=KF2_INSTALL_PATH,
+                            brew_path=KF2_BREWED_PATH
+                        )
+        target_path = dest.format(
+                            bin_path=KF2_BIN_PATH,
+                            install_path=KF2_INSTALL_PATH,
+                            brew_path=KF2_BREWED_PATH,
+                            server_path=KF2_SERVER_PATH
+                        )
+
+        if not os.path.exists(target_path):
+            os.makedirs(target_path)
+        shutil.copy(src_fpath,target_path)
+
 
 elif args['build']:
     config = build_config(CONFIG_FPATH)
