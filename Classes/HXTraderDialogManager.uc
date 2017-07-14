@@ -1,4 +1,4 @@
-class Hax_TraderDialogManager extends KFTraderDialogManager;
+class HXTraderDialogManager extends KFTraderDialogManager;
 
 
 simulated function PlayDialog( int EventID, Controller C )

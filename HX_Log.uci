@@ -1,0 +1,10 @@
+//`define HX_LOG 1
+
+`if(`isdefined(HX_LOG))
+`define hxLog(text, cond) `log(`text, `cond, 'HX')
+`define hxScriptTrace() ScriptTrace()
+`else
+`define hxLog(text, cond) //`log(`text, `cond, 'HX')
+`define hxScriptTrace() //ScriptTrace()
+`endif
+

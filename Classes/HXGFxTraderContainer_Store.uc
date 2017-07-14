@@ -1,4 +1,4 @@
-class Hax_GFxTraderContainer_Store extends KFGFxTraderContainer_Store;
+class HXGFxTraderContainer_Store extends KFGFxTraderContainer_Store;
 
 function int PerkFind( array< class<KFPerk> > AssociatedPerkClasses, class<KFPerk> TargetPerkClass )
 {

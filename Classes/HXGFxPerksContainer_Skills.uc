@@ -1,4 +1,4 @@
-class Hax_GFxPerksContainer_Skills extends KFGFxPerksContainer_Skills;
+class HXGFxPerksContainer_Skills extends KFGFxPerksContainer_Skills;
 
 function GFxObject GetSkillObject(byte TierIndex, byte SkillIndex, bool bShouldUnlock, class<KFPerk> PerkClass)
 {
@@ -16,9 +16,9 @@ function GFxObject GetSkillObject(byte TierIndex, byte SkillIndex, bool bShouldU
     // Deal with Localization files later
     // PackageName = Left(PerkClass.Name,2) $ "Game";
     PackageName = "KFGame";
-    if ( Left(PerkClass.Name,4) == "Hax_" )
+    if ( Left(PerkClass.Name,2) == "HX" )
     {
-        PerkClassName = "KFPerk_"$Mid(PerkClass.Name,9);
+        PerkClassName = "KFPerk_"$Mid(PerkClass.Name,7);
     }
     else
     {
