@@ -14,10 +14,13 @@ It's hilarious with the right group though.
 
 And just maybe the source code may be useful for someone trying to see how to modify perks.
 
+This may be the last update to this particular mod. Most of the functionality and more will become available in YeeHaw.
+
 Changes from vanilla survival:
 
 * Infinite Ammo, no reload required (Grenades, syringe are still behaves like in vanilla)
 * No trader lines spoken
+* Requires ControlledDifficulty to also be installed
 
 Changes from previous version
 
